@@ -60,7 +60,7 @@ class Featured extends Component {
     }
 
     getItems = () => {
-        return this.state.items.filter(({category}) => category.includes(this.state.category)).map(({id})=>id)
+        return this.state.items.filter(({category}) => category.includes(this.state.category)).map(({id}) => id)
     }
 
     setCategory = (category) => () => {
@@ -94,28 +94,29 @@ class Featured extends Component {
 
                     <ReactMixitup
                         items={this.getItems()}
-                        renderCells={(MItems) => (
+                        renderCells={(items) => (
                             <div className="row featured__filter">
-                                {MItems.map(({key,ref,style}) => {
-                                    const item = this.state.items.find(({id})=>id==key)
-                                    return (
-                                        <div key={key} ref={ref} style={style} className="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                                            <div className="featured__item">
+                                {items.map(({key, ref, style}) => {
+                                    const item = this.state.items.find(({id}) => id === +key)
+                                    return <div key={key} ref={ref} style={style}
+                                                className="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                                        <div className="featured__item">
 
-                                                <div className="featured__item__pic set-bg" data-setbg={item.image}>
-                                                    <ul className="featured__item__pic__hover">
-                                                        <li><a href="#"><i className="fa fa-heart"></i></a></li>
-                                                        <li><a href="#"><i className="fa fa-retweet"></i></a></li>
-                                                        <li><a href="#"><i className="fa fa-shopping-cart"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div className="featured__item__text">
-                                                    <h6><a href="#">{item.title}</a></h6>
-                                                    <h5>{'$'}{item.price}</h5>
-                                                </div>
+                                            <div className="featured__item__pic set-bg"
+                                                 style={{backgroundImage: `url(${item.image})`}}>
+                                                <ul className="featured__item__pic__hover">
+                                                    <li><a href="#"><i className="fa fa-heart"></i></a></li>
+                                                    <li><a href="#"><i className="fa fa-retweet"></i></a></li>
+                                                    <li><a href="#"><i className="fa fa-shopping-cart"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div className="featured__item__text">
+                                                <h6><a href="#">{item.title}</a></h6>
+                                                <h5>{'$'}{item.price}</h5>
                                             </div>
                                         </div>
-                                    )})}
+                                    </div>
+                                })}
                             </div>)}
                     />
 
