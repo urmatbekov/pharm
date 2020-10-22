@@ -1,4 +1,5 @@
 import React from "react";
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
     return(
@@ -62,8 +63,8 @@ const Header = () => {
                     <div className="col-lg-6">
                         <nav className="header__menu">
                             <ul>
-                                <li className="active"><a href="#">Home</a></li>
-                                <li><a href="#">Shop</a></li>
+                                <li><NavLink exact to="/">Home</NavLink></li>
+                                <li><NavLink exact to="/products">Shop</NavLink></li>
                                 <li><a href="#">Pages</a>
                                     <ul className="header__menu__dropdown">
                                         <li><a href="#">Shop Details</a></li>
