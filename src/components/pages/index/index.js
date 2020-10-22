@@ -4,11 +4,13 @@ import HeroCategories from "./hero-categories";
 import UseScript from "../../hooks/use-script";
 import Featured from "./featured";
 import FooterSection from "./footer-section/footer-section";
+import Header from "./header";
 
 class Index extends Component {
     render() {
         return (
             <div>
+                <Header/>
                 <HeroSection/>
                 <HeroCategories/>
                 <Featured/>
