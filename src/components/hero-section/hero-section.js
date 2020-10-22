@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
+import HeroItem from "./hero-item";
 
 class HeroSection extends Component {
     render() {
+        const normal = this.props['normal']
+
         return (
-            <section className="hero">
+            <section className={"hero " + (normal ? "hero-normal" : '')}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-3">
@@ -56,14 +59,7 @@ class HeroSection extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="hero__item set-bg" style={{backgroundImage:"url(img/hero/banner.jpg)"}}>
-                                <div className="hero__text">
-                                    <span>FRUIT FRESH</span>
-                                    <h2>Vegetable <br/>100% Organic</h2>
-                                    <p>Free Pickup and Delivery Available</p>
-                                    <a href="#" className="primary-btn">SHOP NOW</a>
-                                </div>
-                            </div>
+                            {!normal && <HeroItem/>}
                         </div>
                     </div>
                 </div>

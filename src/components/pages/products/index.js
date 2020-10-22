@@ -1,19 +1,16 @@
 import React, {Component} from 'react';
-import HeroSection from "../../hero-section";
-import HeroCategories from "./hero-categories";
 import UseScript from "../../hooks/use-script";
-import Featured from "./featured";
 import FooterSection from "../../footer-section/footer-section";
 import Header from "../../header";
+import HeroSection from "../../hero-section";
 
-class Index extends Component {
+
+class Products extends Component {
     render() {
         return (
             <div>
                 <Header/>
-                <HeroSection/>
-                <HeroCategories/>
-                <Featured/>
+                <HeroSection normal/>
                 <FooterSection/>
                 <UseScript url="/js/main.js"/>
             </div>
@@ -21,4 +18,4 @@ class Index extends Component {
     }
 }
 
-export default Index;
+export default Products;
