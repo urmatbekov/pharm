@@ -3,6 +3,7 @@ import HeroSection from "./hero-section";
 import HeroCategories from "./hero-categories";
 import UseScript from "../../hooks/use-script";
 import Featured from "./featured";
+import FooterSection from "./footer-section/footer-section";
 
 class Index extends Component {
     render() {
@@ -11,6 +12,7 @@ class Index extends Component {
                 <HeroSection/>
                 <HeroCategories/>
                 <Featured/>
+                <FooterSection/>
                 <UseScript url="/js/main.js"/>
             </div>
         );

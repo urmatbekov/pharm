@@ -71,7 +71,6 @@ class Featured extends Component {
 
 
     render() {
-
         return (
             <section className="featured spad">
                 <div className="container">
@@ -101,7 +100,6 @@ class Featured extends Component {
                                     return <div key={key} ref={ref} style={style}
                                                 className="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
                                         <div className="featured__item">
-
                                             <div className="featured__item__pic set-bg"
                                                  style={{backgroundImage: `url(${item.image})`}}>
                                                 <ul className="featured__item__pic__hover">
