@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
-import Index from "../pages/index";
-import Products from "../pages/products";
 import {
     BrowserRouter as Router,
     Switch,
     Route,
 } from "react-router-dom";
 import BlogDetails from "../pages/blog-details/BlogDetails";
+import IndexPage from "../pages/index";
+import ProductPage from "../pages/product";
+
 
 
 class App extends Component {
@@ -16,10 +17,10 @@ class App extends Component {
                 <Router>
                     <Switch>
                         <Route exact path='/'>
-                            <Index/>
+                            <IndexPage/>
                         </Route>
                         <Route exact path='/products'>
-                            <Products/>
+                            <ProductPage/>
                         </Route>
                          <Route exact path='/blog_details'>
                             <BlogDetails/>
