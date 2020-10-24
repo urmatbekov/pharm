@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import HeroItem from "./hero-item";
+import BlogDetailsHero from "../pages/blog-details/blog-details-hero/blog-details-hero";
+import BlogDetailsSpad from "../pages/blog-details/blog-details-hero/blog-details-hero";
 
 class HeroSection extends Component {
     render() {

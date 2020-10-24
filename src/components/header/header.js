@@ -65,14 +65,8 @@ const Header = () => {
                             <ul>
                                 <li><NavLink exact to="/">Home</NavLink></li>
                                 <li><NavLink exact to="/products">Shop</NavLink></li>
-                                <li><a href="#">Pages</a>
-                                    <ul className="header__menu__dropdown">
-                                        <li><a href="#">Shop Details</a></li>
-                                        <li><a href="#">Shoping Cart</a></li>
-                                        <li><a href="#">Check Out</a></li>
-                                        <li><a href="#">Blog Details</a></li>
-                                    </ul>
-                                </li>
+                                <li><NavLink exact to="/blog_details">Blog Details</NavLink></li>
+
                                 <li><a href="#">Blog</a></li>
                                 <li><a href="#">Contact</a></li>
                             </ul>
