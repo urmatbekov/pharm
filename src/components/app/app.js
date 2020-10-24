@@ -6,6 +6,7 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
+import Contact from "../contact";
 
 
 class App extends Component {
@@ -19,6 +20,9 @@ class App extends Component {
                         </Route>
                         <Route exact path='/products'>
                             <Products/>
+                        </Route>
+                        <Route exact path='/contacts'>
+                            <Contact/>
                         </Route>
                     </Switch>
                 </Router>
