@@ -3,10 +3,10 @@ import HeroSection from "../../hero-section";
 import HeroCategories from "./hero-categories";
 import UseScript from "../../hooks/use-script";
 import Featured from "./featured";
-import FooterSection from "../../footer-section/footer-section";
+import Footer from "../../footer/footer";
 import Header from "../../header";
 
-class Index extends Component {
+class IndexPage extends Component {
     render() {
         return (
             <div>
@@ -14,11 +14,11 @@ class Index extends Component {
                 <HeroSection/>
                 <HeroCategories/>
                 <Featured/>
-                <FooterSection/>
+                <Footer/>
                 <UseScript url="/js/main.js"/>
             </div>
         );
     }
 }
 
-export default Index;
+export default IndexPage;

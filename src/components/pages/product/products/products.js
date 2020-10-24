@@ -3,18 +3,15 @@ import OwlCarousel from "react-owl-carousel";
 
 const owlCarousel = {
     loop: true,
+    margin: 0,
     items: 3,
-    dots: false,
-    nav: true,
-    navText: ["<span class='fa fa-angle-left'><span/>", "<span class='fa fa-angle-right'><span/>"],
-    animateOut: true,
-    animateIn: true,
+    dots: true,
     smartSpeed: 1200,
-    // autoHeight: false,
+    autoHeight: false,
     autoplay: true,
     responsive: {
 
-        0: {
+        320: {
             items: 1,
         },
 
@@ -23,12 +20,16 @@ const owlCarousel = {
         },
 
         768: {
-            items: 3,
+            items: 2,
         },
+
+        992: {
+            items: 3,
+        }
     }
 }
 
-const ProductSection = () => {
+const Products = () => {
     return (
         <section className="product spad">
             <div className="container">
@@ -70,85 +71,6 @@ const ProductSection = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="sidebar__item">
-                                <div className="latest-product__text">
-                                    <h4>Latest Products</h4>
-                                    <OwlCarousel {...owlCarousel} className="categories__slider">
-                                        <div className="latest-product__slider owl-carousel">
-                                            <div className="latest-prdouct__slider__item">
-                                                <a href="#" className="latest-product__item">
-                                                    <div className="latest-product__item__pic">
-                                                        <img
-                                                            style={{backgroundImage: `url(/img/latest-product/lp-1.jpg)`}}
-                                                            alt=""/>
-                                                    </div>
-                                                    <div className="latest-product__item__text">
-                                                        <h6>Crab Pool Security</h6>
-                                                        <span>$30.00</span>
-                                                    </div>
-                                                </a>
-                                                <a href="#" className="latest-product__item">
-                                                    <div className="latest-product__item__pic">
-                                                        <img
-                                                            style={{backgroundImage: `url(/img/latest-product/lp-2.jpg)`}}
-                                                            alt=""/>
-                                                    </div>
-                                                    <div className="latest-product__item__text">
-                                                        <h6>Crab Pool Security</h6>
-                                                        <span>$30.00</span>
-                                                    </div>
-                                                </a>
-                                                <a href="#" className="latest-product__item">
-                                                    <div className="latest-product__item__pic">
-                                                        <img
-                                                            style={{backgroundImage: `url(/img/latest-product/lp-3.jpg)`}}
-                                                            alt=""/>
-                                                    </div>
-                                                    <div className="latest-product__item__text">
-                                                        <h6>Crab Pool Security</h6>
-                                                        <span>$30.00</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div className="latest-prdouct__slider__item">
-                                                <a href="#" className="latest-product__item">
-                                                    <div className="latest-product__item__pic">
-                                                        <img
-                                                            style={{backgroundImage: `url(/img/latest-product/lp-1.jpg)`}}
-                                                            alt=""/>
-                                                    </div>
-                                                    <div className="latest-product__item__text">
-                                                        <h6>Crab Pool Security</h6>
-                                                        <span>$30.00</span>
-                                                    </div>
-                                                </a>
-                                                <a href="#" className="latest-product__item">
-                                                    <div className="latest-product__item__pic">
-                                                        <img
-                                                            style={{backgroundImage: `url(/img/latest-product/lp-2.jpg)`}}
-                                                            alt=""/>
-                                                    </div>
-                                                    <div className="latest-product__item__text">
-                                                        <h6>Crab Pool Security</h6>
-                                                        <span>$30.00</span>
-                                                    </div>
-                                                </a>
-                                                <a href="#" className="latest-product__item">
-                                                    <div className="latest-product__item__pic">
-                                                        <img
-                                                            style={{backgroundImage: `url(/img/latest-product/lp-3.jpg)`}}
-                                                            alt=""/>
-                                                    </div>
-                                                    <div className="latest-product__item__text">
-                                                        <h6>Crab Pool Security</h6>
-                                                        <span>$30.00</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </OwlCarousel>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div className="col-lg-9 col-md-7">
@@ -157,7 +79,7 @@ const ProductSection = () => {
                                 <h2>Sale Off</h2>
                             </div>
                             <div className="row">
-                                <div className="product__discount__slider owl-carousel">
+                                <OwlCarousel {...owlCarousel} className="product__discount__slider owl-carousel">
                                     <div className="col-lg-4">
                                         <div className="product__discount__item">
                                             <div className="product__discount__item__pic set-bg"
@@ -266,7 +188,7 @@ const ProductSection = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </OwlCarousel>
                             </div>
                         </div>
                         <div className="filter__item">
@@ -487,4 +409,4 @@ const ProductSection = () => {
         </section>
     )
 }
-export default ProductSection;
+export default Products;

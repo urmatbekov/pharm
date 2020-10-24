@@ -1,25 +1,25 @@
 import React, {Component} from 'react';
 import UseScript from "../../hooks/use-script";
-import FooterSection from "../../footer-section/footer-section";
+import Footer from "../../footer/footer";
 import Header from "../../header";
 import HeroSection from "../../hero-section";
-import GridSections from "./grid-section";
-import ProductSection from "./product-section";
+import Products from "./products";
+import Grid from "./grid";
 
 
-class Products extends Component {
+class ProductPage extends Component {
     render() {
         return (
             <div>
                 <Header/>
                 <HeroSection normal/>
-                <GridSections/>
-                <ProductSection/>
-                <FooterSection/>
+                <Grid/>
+                <Products/>
+                <Footer/>
                 <UseScript url="/js/main.js"/>
             </div>
         );
     }
 }
 
-export default Products;
+export default ProductPage;

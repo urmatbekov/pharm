@@ -1,6 +1,6 @@
 import React from "react";
 
-const GridSections = () => {
+const Grid = () => {
     return(
         <section className="breadcrumb-section set-bg" style={{backgroundImage:"url(img/breadcrumb.jpg)"}}>
             <div className="container">
@@ -20,4 +20,4 @@ const GridSections = () => {
     )
 }
 
-export default GridSections;
+export default Grid;

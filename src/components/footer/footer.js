@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class FooterSection extends Component {
+class Footer extends Component {
     render() {
         return (
                 <footer className="footer spad">
@@ -89,4 +89,4 @@ class FooterSection extends Component {
         );
     }}
 
-export default FooterSection;
+export default Footer;
