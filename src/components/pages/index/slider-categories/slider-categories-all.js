@@ -32,7 +32,7 @@ const owlCarousel = {
     }
 }
 
-const HeroCategories = () => {
+const SliderCategories = () => {
     return (
         <section className="categories">
             <div className="container">
@@ -74,4 +74,4 @@ const HeroCategories = () => {
         </section>
     )
 }
-export default HeroCategories;
+export default SliderCategories;

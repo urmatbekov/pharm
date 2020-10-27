@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import ReactMixitup from 'react-mixitup'
+import FeaturedHeader from "./featured-header/featured-header";
+import FeaturedMixitup from "./featured-mixitup/featured-mixitup";
 
 class Featured extends Component {
 
@@ -60,7 +61,10 @@ class Featured extends Component {
     }
 
     getItems = () => {
-        return this.state.items.filter(({category}) => category.includes(this.state.category)).map(({id}) => id)
+        const state = this.state;
+        const items = state.items.filter(({category}) => category.includes(state.category));
+        return items.map(item => item.id)
+
     }
 
     setCategory = (category) => () => {
@@ -69,55 +73,12 @@ class Featured extends Component {
         })
     }
 
-
     render() {
         return (
             <section className="featured spad">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="section-title">
-                                <h2>Featured Product</h2>
-                            </div>
-                            <div className="featured__controls">
-                                <ul>
-                                    <li onClick={this.setCategory("active")}>All</li>
-                                    <li onClick={this.setCategory("oranges")}>Oranges</li>
-                                    <li onClick={this.setCategory("fresh-meat")}>Fresh Meat</li>
-                                    <li onClick={this.setCategory("vegetables")}>Vegetables</li>
-                                    <li onClick={this.setCategory("fastfood")}>Fastfood</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <ReactMixitup
-                        items={this.getItems()}
-                        renderCells={(items) => (
-                            <div className="row featured__filter">
-                                {items.map(({key, ref, style}) => {
-                                    const item = this.state.items.find(({id}) => id === +key)
-                                    return <div key={key} ref={ref} style={style}
-                                                className="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                                        <div className="featured__item">
-                                            <div className="featured__item__pic set-bg"
-                                                 style={{backgroundImage: `url(${item.image})`}}>
-                                                <ul className="featured__item__pic__hover">
-                                                    <li><a href="#"><i className="fa fa-heart"></i></a></li>
-                                                    <li><a href="#"><i className="fa fa-retweet"></i></a></li>
-                                                    <li><a href="#"><i className="fa fa-shopping-cart"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div className="featured__item__text">
-                                                <h6><a href="#">{item.title}</a></h6>
-                                                <h5>{'$'}{item.price}</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                })}
-                            </div>)}
-                    />
-
+                    <FeaturedHeader setCategory={this.setCategory}/>
+                    <FeaturedMixitup items={this.getItems()} itemsState = {this.state.items}/>
                 </div>
             </section>
         );
