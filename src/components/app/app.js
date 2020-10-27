@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 import IndexPage from "../pages/index";
 import ProductPage from "../pages/product";
+import Contact from "../contact";
+
 
 
 class App extends Component {
@@ -19,6 +21,9 @@ class App extends Component {
                         </Route>
                         <Route exact path='/products'>
                             <ProductPage/>
+                        </Route>
+                        <Route exact path='/contacts'>
+                            <Contact/>
                         </Route>
                     </Switch>
                 </Router>

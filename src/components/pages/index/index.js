@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import HeroSection from "../../hero-section";
-import HeroCategories from "./hero-categories";
+import SliderCategories from "./slider-categories";
 import UseScript from "../../hooks/use-script";
 import Featured from "./featured";
 import Footer from "../../footer/footer";
@@ -12,7 +12,7 @@ class IndexPage extends Component {
             <div>
                 <Header/>
                 <HeroSection/>
-                <HeroCategories/>
+                <SliderCategories/>
                 <Featured/>
                 <Footer/>
                 <UseScript url="/js/main.js"/>
