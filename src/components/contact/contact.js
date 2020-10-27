@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Header from "../header";
 import HeroSection from "../hero-section";
 import ContactSection from "./contact-section";
-import FooterSection from "../footer-section/footer-section";
+import Footer from "../footer/footer";
 
 class Contact extends Component {
     render() {
@@ -11,7 +11,7 @@ class Contact extends Component {
                 <Header/>
                 <HeroSection normal/>
                 <ContactSection/>
-                <FooterSection/>
+                <Footer/>
             </div>
         );
     }
